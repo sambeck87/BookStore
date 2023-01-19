@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+}
+
+.App {
+  background-image: url('./components/backgroug_grey.jpg');
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

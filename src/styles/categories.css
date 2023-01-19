@@ -1,0 +1,14 @@
+#workingContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#working {
+  font-size: 40px;
+}
