@@ -1,0 +1,23 @@
+#form {
+  margin-top: 3vw;
+}
+
+#titleInput,
+#authoeInput,
+#submitButton {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  #form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #titleInput,
+  #authoeInput,
+  #submitButton {
+    margin-top: 25px;
+  }
+}
