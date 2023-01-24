@@ -1,7 +1,9 @@
+import demoListBooks from '../../components/DemoBooks';
+
 const ADD_BOOK = 'BookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'BookStore/books/REMOVE_BOOK';
 
-const initalState = [];
+const initalState = demoListBooks;
 
 export const add = (book) => ({
   type: ADD_BOOK,
@@ -19,7 +21,7 @@ const reducer = (state = initalState, action) => {
       ...state,
       action.book,
     ];
-    case REMOVE_BOOK: return state.filter((item) => item.id !== action.id);
+    case REMOVE_BOOK: return state.filter((_, item) => item.id !== action.id);
 
     default: return state;
   }
