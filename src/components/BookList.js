@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import '../styles/bookList.css';
-import demoListBooks from './DemoBooks';
 
 function BookList() {
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-    setBooks(demoListBooks);
-  }, []);
+  const books = useSelector((store) => store.demoListBooks);
 
   if (books.length === 0) {
     return (
