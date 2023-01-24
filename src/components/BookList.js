@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Book from './Book';
+import BookItem from './Book';
 import '../styles/bookList.css';
 
 function BookList() {
-  const books = useSelector((store) => store.demoListBooks);
+  const books = useSelector((state) => state.rootReducer.bookReducer);
 
   if (books.length === 0) {
     return (
@@ -14,7 +14,13 @@ function BookList() {
 
   return (
     books.map((book) => (
-      <Book key={book.id} title={book.title} author={book.author} category={book.category} />
+      <BookItem
+        key={book.id}
+        id={book.id}
+        title={book.title}
+        author={book.author}
+        category={book.category}
+      />
     ))
   );
 }

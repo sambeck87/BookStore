@@ -1,9 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import '../styles/bookItem.css';
 import PropTypes from 'prop-types';
+import { remove } from '../redux/books/books';
 
 const BookItem = (props) => {
-  const { title, author, category } = props;
+  const dispatch = useDispatch();
+  const {
+    id, title, author, category,
+  } = props;
 
   return (
     <div className="containerItem">
@@ -12,7 +17,9 @@ const BookItem = (props) => {
         <span className="title">{title}</span>
         <span className="author">{author}</span>
       </div>
-      <button type="button" className="deleteButon">Remove</button>
+      <button type="button" className="deleteButon" onClick={() => dispatch(remove(id))}>
+        Remove
+      </button>
     </div>
   );
 };
@@ -20,6 +27,7 @@ const BookItem = (props) => {
 export default BookItem;
 
 BookItem.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
