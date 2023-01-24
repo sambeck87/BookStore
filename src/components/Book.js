@@ -10,6 +10,10 @@ const BookItem = (props) => {
     id, title, author, category,
   } = props;
 
+  const clickHandle = () => {
+    dispatch(remove(id));
+  };
+
   return (
     <div className="containerItem">
       <div className="dataContainer">
@@ -17,7 +21,7 @@ const BookItem = (props) => {
         <span className="title">{title}</span>
         <span className="author">{author}</span>
       </div>
-      <button type="button" className="deleteButon" onClick={() => dispatch(remove(id))}>
+      <button type="button" className="deleteButon" onClick={clickHandle}>
         Remove
       </button>
     </div>

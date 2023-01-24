@@ -7,9 +7,13 @@ function Categories() {
   const dispatch = useDispatch();
   const message = useSelector((state) => state.rootReducer.statusReducer);
 
+  const clickHandle = () => {
+    dispatch(checkStatus());
+  };
+
   return (
     <div id="workingContainer">
-      <button type="button" onClick={() => dispatch(checkStatus())}>Check status</button>
+      <button type="button" onClick={clickHandle}>Check status</button>
       <div id="working">{message}</div>
     </div>
   );
