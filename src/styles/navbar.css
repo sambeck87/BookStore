@@ -1,3 +1,8 @@
+.gap {
+  grid-gap: 40px;
+  gap: 40px;
+}
+
 #containContainer {
   width: 100%;
   border-bottom: 1px solid #e8e8e8;
@@ -9,17 +14,13 @@
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  grid-gap: 40px;
-  gap: 40px;
 }
 
 #logoLink {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.875rem;
   font-weight: 700;
   color: #0290ff;
   text-decoration: none;
-  cursor: pointer;
 }
 
 #links {
@@ -27,8 +28,6 @@
   display: flex;
   flex-grow: 1;
   list-style-type: none;
-  grid-gap: 40px;
-  gap: 40px;
 }
 
 #links li a {
@@ -43,12 +42,10 @@
 
 .active-link {
   opacity: 1;
-  color: #121212;
   font-weight: 600;
 }
 
 #personButton {
-  cursor: pointer;
   width: 2.813rem;
   height: 2.813rem;
   border-radius: 50%;

@@ -15,30 +15,30 @@ const BookItem = (props) => {
   };
 
   return (
-    <div className="itemContainer">
-      <div className="dataContainer">
-        <div className="BookContainer">
-          <h4 className="category">{category}</h4>
-          <h2 className="title">{title}</h2>
-          <h6 className="author">{author}</h6>
+    <div className="itemContainer flexRow w100">
+      <div className="dataContainer flexRow w100">
+        <div className="BookContainer w100">
+          <h4 className="category darkFont montserratFont">{category}</h4>
+          <h2 className="title robotoFont darkFont">{title}</h2>
+          <h6 className="author robotoFont">{author}</h6>
           <div className="buttonContainer">
-            <button type="button" className="bookButton" onClick={clickHandle}>
+            <button type="button" className="bookButton robotoFont cursorPoiter" onClick={clickHandle}>
               Comments
             </button>
-            <button type="button" className="bookButton deleteButon" onClick={clickHandle}>
+            <button type="button" className="bookButton deleteButon robotoFont cursorPoiter" onClick={clickHandle}>
               Remove
             </button>
-            <button type="button" className="bookButton" onClick={clickHandle}>
+            <button type="button" className="bookButton robotoFont cursorPoiter" onClick={clickHandle}>
               Edit
             </button>
           </div>
 
         </div>
-        <div className="progress">
+        <div className="progress flexRow">
           <div className="circleContainer">
             <div className="circle">&nbsp;</div>
           </div>
-          <div className="percentContainer">
+          <div className="percentContainer darkFont montserratFont flexCol">
             <p className="percent">
               {title.length}
               %
@@ -47,14 +47,14 @@ const BookItem = (props) => {
           </div>
           <div className="divisor">&nbsp;</div>
           <div>
-            <div className="charterContainer">
+            <div className="charterContainer robotoFont darkFont">
               <p className="labelChapter">CURRENT CHAPTER</p>
               <p className="chapter">
                 Chapter
                 {title.length * 2}
               </p>
             </div>
-            <button type="button" className="updateButton">UPDATE PROGRESS</button>
+            <button type="button" className="updateButton robotoFont cursorPoiter">UPDATE PROGRESS</button>
           </div>
         </div>
       </div>

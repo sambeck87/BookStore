@@ -1,13 +1,10 @@
 #form_container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   margin-top: 2.5rem;
   border-top: 0.125rem #e8e8e8 solid;
 }
 
 #AddNewBook {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: #888;
@@ -15,8 +12,6 @@
 }
 
 #form {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -31,7 +26,6 @@
   border-radius: 4px;
   border: 1px solid #e8e8e8;
   background-color: #fff;
-  font-family: "Montserrat", sans-serif;
 }
 
 #titleInput::placeholder,
@@ -47,13 +41,11 @@
   border-radius: 4px;
   border: #e8e8e8 solid 1px;
   background-color: white;
-  font-family: "Montserrat", sans-serif;
   margin-right: 32px;
 }
 
 #submitButton {
   color: white;
-  font-family: "Roboto Slab", serif;
   font-size: 0.813rem;
   font-weight: 700;
   background-color: #0290ff;
@@ -61,5 +53,4 @@
   border-radius: 3px;
   padding: 12px;
   width: 20%;
-  cursor: pointer;
 }
