@@ -1,14 +1,14 @@
 #workingContainer {
-  height: 100vh;
+  height: 200px;
   width: 100%;
-  background-color: black;
-  color: aliceblue;
-  display: flex;
-  flex-direction: column;
+  background-color: #fafafa;
+  color: rgb(0, 0, 0);
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-left: 8%;
 }
 
 #working {
-  font-size: 40px;
+  font-size: 2em;
+  font-weight: bold;
 }

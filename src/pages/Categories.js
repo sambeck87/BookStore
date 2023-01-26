@@ -12,9 +12,9 @@ function Categories() {
   };
 
   return (
-    <div id="workingContainer">
-      <button type="button" onClick={clickHandle}>Check status</button>
+    <div id="workingContainer" className="flexCol">
       <div id="working">{message}</div>
+      <button type="button" onClick={clickHandle}>Check status</button>
     </div>
   );
 }

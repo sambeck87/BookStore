@@ -6,9 +6,8 @@ const GET_BOOKS = 'BookStore/book/GET_BOOKS';
 const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/dddvqvVfM1LhvUTTpKpc/books/';
 
 export const getBooks = () => async (dispatch) => {
-  const response = await axios.get(URL).then(
-    (allBooks) => Object.entries(allBooks.data).map(([id, book]) => ({ id, ...book[0] })),
-  );
+  const response = await axios.get(URL)
+    .then((allBooks) => Object.entries(allBooks.data).map(([id, book]) => ({ id, ...book[0] })));
   dispatch({
     type: GET_BOOKS,
     books: response,

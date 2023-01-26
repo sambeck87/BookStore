@@ -1,55 +1,54 @@
-#navCotainer {
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  color: rgb(107, 154, 197);
-  padding: 1.2vw 0 1.2vw 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
+.gap {
+  grid-gap: 40px;
+  gap: 40px;
 }
 
-#title {
-  font-size: 40px;
-  margin: 0 4vw 0 1.5vw;
+#containContainer {
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: rgb(255, 255, 255);
+}
+
+#navCotainer {
+  margin: 24px 4% 24px 4%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+}
+
+#logoLink {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
+  text-decoration: none;
 }
 
 #links {
-  font-size: 18px;
+  padding: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 12vw;
-  list-style: none;
-  align-self: flex-end;
-}
-
-#links li {
-  margin-right: 15px;
+  flex-grow: 1;
+  list-style-type: none;
 }
 
 #links li a {
   text-decoration: none;
-}
-
-#links li a:visited {
-  color: rgb(139, 139, 139);
+  cursor: pointer;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
 }
 
 .active-link {
-  font-size: 19px;
+  opacity: 1;
   font-weight: 600;
-  color: rgb(10, 10, 58);
-  text-shadow: rgb(5, 129, 231) 0 0 10px;
 }
 
-@media screen and (max-width: 768px) {
-  #navCotainer {
-    flex-direction: column;
-  }
-
-  #links {
-    align-self: flex-start;
-    margin: 10px 0 10px 1.5vw;
-    padding: 0;
-  }
+#personButton {
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  background-color: white;
 }
