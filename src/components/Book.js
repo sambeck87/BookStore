@@ -15,15 +15,49 @@ const BookItem = (props) => {
   };
 
   return (
-    <div className="containerItem">
+    <div className="itemContainer">
       <div className="dataContainer">
-        <span className="category">{category}</span>
-        <span className="title">{title}</span>
-        <span className="author">{author}</span>
+        <div className="BookContainer">
+          <h4 className="category">{category}</h4>
+          <h2 className="title">{title}</h2>
+          <h6 className="author">{author}</h6>
+          <div className="buttonContainer">
+            <button type="button" className="bookButton" onClick={clickHandle}>
+              Comments
+            </button>
+            <button type="button" className="bookButton deleteButon" onClick={clickHandle}>
+              Remove
+            </button>
+            <button type="button" className="bookButton" onClick={clickHandle}>
+              Edit
+            </button>
+          </div>
+
+        </div>
+        <div className="progress">
+          <div className="circleContainer">
+            <div className="circle">&nbsp;</div>
+          </div>
+          <div className="percentContainer">
+            <p className="percent">
+              {title.length}
+              %
+            </p>
+            <p className="completed">Completed</p>
+          </div>
+          <div className="divisor">&nbsp;</div>
+          <div>
+            <div className="charterContainer">
+              <p className="labelChapter">CURRENT CHAPTER</p>
+              <p className="chapter">
+                Chapter
+                {title.length * 2}
+              </p>
+            </div>
+            <button type="button" className="updateButton">UPDATE PROGRESS</button>
+          </div>
+        </div>
       </div>
-      <button type="button" className="deleteButon" onClick={clickHandle}>
-        Remove
-      </button>
     </div>
   );
 };
